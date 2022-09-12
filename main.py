@@ -1,13 +1,11 @@
 import webbrowser
 import sys
-
 from PySide6 import QtWidgets
 from PySide6.QtWidgets import QApplication, QWidget
 
 webbrowser.open('https://sites.google.com/view/hellowelcometomysoftwareworld/%E0%B8%AB%E0%B8%99%E0%B8%B2%E0%B9%81%E0%B8%A3%E0%B8%81')
 
 def calculate_color_price(color):
-    print(color)
     if color == 'red':
         return 20
     elif color == 'gray':
@@ -74,11 +72,16 @@ class Widget(QWidget):
         self.setWindowTitle('Hello World')
         self.show()
 
-
+    # on close event
+    def closeEvent(self, event):
+        webbrowser.open(
+            "https://sites.google.com/view/thecredit/%E0%B8%AB%E0%B8%99%E0%B8%B2%E0%B9%81%E0%B8%A3%E0%B8%81")
+        event.accept()
 
 app = QApplication(sys.argv)
 widget = Widget()
 sys.exit(app.exec())
 
-webbrowser.open("https://sites.google.com/view/thecredit/%E0%B8%AB%E0%B8%99%E0%B8%B2%E0%B9%81%E0%B8%A3%E0%B8%81")
+
+
 
