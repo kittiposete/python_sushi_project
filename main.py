@@ -81,7 +81,3 @@ class Widget(QWidget):
 app = QApplication(sys.argv)
 widget = Widget()
 sys.exit(app.exec())
-
-
-
-
