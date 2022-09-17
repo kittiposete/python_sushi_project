@@ -16,7 +16,6 @@ def calculate_color_price(color):
         return 80
 
 class Widget(QWidget):
-    # qt hello world aplication
     def on_button_red_clicked(self):
         self.price += calculate_color_price('red')
         self.label.setText(f'Price: {self.price}')
@@ -69,10 +68,9 @@ class Widget(QWidget):
         self.label.resize(200, 20)
 
         self.setGeometry(300, 300, 300, 300)
-        self.setWindowTitle('Hello World')
+        self.setWindowTitle('โปรแกรมคำนวนราคาซุชิ')
         self.show()
 
-    # on close event
     def closeEvent(self, event):
         webbrowser.open(
             "https://sites.google.com/view/thecredit/%E0%B8%AB%E0%B8%99%E0%B8%B2%E0%B9%81%E0%B8%A3%E0%B8%81")
