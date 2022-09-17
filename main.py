@@ -6,14 +6,20 @@ from PySide6.QtWidgets import QApplication, QWidget
 webbrowser.open('https://sites.google.com/view/hellowelcometomysoftwareworld/%E0%B8%AB%E0%B8%99%E0%B8%B2%E0%B9%81%E0%B8%A3%E0%B8%81')
 
 def calculate_color_price(color):
+    price = 0
     if color == 'red':
-        return 20
+        while price < 40:
+            price += 1
     elif color == 'gray':
-        return 40
+        while price < 60:
+            price += 1
     elif color == 'gold':
-        return 60
+        while price < 80:
+            price += 1
     elif color == 'black':
-        return 80
+        while price < 120:
+            price += 1
+    return price
 
 class Widget(QWidget):
     def on_button_red_clicked(self):
@@ -72,8 +78,7 @@ class Widget(QWidget):
         self.show()
 
     def closeEvent(self, event):
-        webbrowser.open(
-            "https://sites.google.com/view/thecredit/%E0%B8%AB%E0%B8%99%E0%B8%B2%E0%B9%81%E0%B8%A3%E0%B8%81")
+        webbrowser.open("https://sites.google.com/view/thecredit/%E0%B8%AB%E0%B8%99%E0%B8%B2%E0%B9%81%E0%B8%A3%E0%B8%81")
         event.accept()
 
 app = QApplication(sys.argv)
